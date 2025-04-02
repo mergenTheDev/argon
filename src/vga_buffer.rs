@@ -143,14 +143,3 @@ pub fn _print(args: fmt::Arguments) {
     use core::fmt::Write;
     WRITER.lock().write_fmt(args).unwrap();
 }
-
-/*pub fn print() {
-    let mut writer = Writer {
-        column_position: 0,
-        color_code: ColorCode::new(Color::White, Color::Black),
-        buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
-    };
-
-    writer.write_string("Hello World!");
-    writer.write_byte(b'\n');
-}*/
